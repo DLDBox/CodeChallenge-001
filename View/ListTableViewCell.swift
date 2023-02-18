@@ -20,8 +20,10 @@ class ListTableViewCell: UITableViewCell {
     var country: Country? {
         
         set(value) {
-            if let value = value {
-                countryName.text = value.name
+            if let value = value, let name = value.name {
+                let region = value.region ?? ""
+                
+                countryName.text = "\(name), \(region)"
                 countryCode.text = value.code
                 countryCapital.text = value.capital
             }
