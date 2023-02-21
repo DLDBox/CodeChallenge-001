@@ -30,7 +30,7 @@ class ServerAPI {
                 }
                 
             } else {
-                completion( nil,nil )
+                completion( nil,ApplicationError.unknown )
             }
             
         })
